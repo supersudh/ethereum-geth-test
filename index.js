@@ -3,7 +3,7 @@ const bip39 = require('bip39');
 const hdkey = require('hdkey');
 const ethUtil = require('ethereumjs-util');
 
-const MNEMONIC = 'tower survey flavor analyst car thrive leopard edge delay little drift height';
+const MNEMONIC = 'aisle siren gather gas together reject humble elegant advice old solar sentence';
 
 (async () => {
   // 1. Seed from mnemonic
@@ -20,4 +20,5 @@ const MNEMONIC = 'tower survey flavor analyst car thrive leopard edge delay litt
   const addr = ethUtil.publicToAddress(pubKey).toString('hex');
   const address = ethUtil.toChecksumAddress(addr)
   console.log(address);
+  console.log('privatekey', addrNode._privateKey.toString('hex'));
 })();
